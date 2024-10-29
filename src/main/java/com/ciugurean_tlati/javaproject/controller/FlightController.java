@@ -43,13 +43,4 @@ public class FlightController {
         flightService.deleteFlight(id);
         return ResponseEntity.noContent().build();
     }
-
-    @GetMapping("/search")
-    public ResponseEntity<List<Flight>> searchFlights(
-            @RequestParam String departureCity,
-            @RequestParam String destinationCity,
-            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date departureDate) {
-        List<Flight> flights = flightService.searchFlights(departureCity, destinationCity, departureDate);
-        return ResponseEntity.ok(flights);
-    }
 }

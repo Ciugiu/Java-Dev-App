@@ -7,5 +7,4 @@ import java.util.Date;
 import java.util.List;
 
 public interface FlightRepository extends JpaRepository<Flight, Long> {
-    List<Flight> findByDepartureCityAndDestinationCityAndDepartureDate(String departureCity, String destinationCity, Date departureDate);
 }

@@ -42,8 +42,4 @@ public class FlightService {
     public void deleteFlight(Long id) {
         flightRepository.deleteById(id);
     }
-
-    public List<Flight> searchFlights(String departureCity, String destinationCity, Date departureDate) {
-        return flightRepository.findByDepartureCityAndDestinationCityAndDepartureDate(departureCity, destinationCity, departureDate);
-    }
 }
